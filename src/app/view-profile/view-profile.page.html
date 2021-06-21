@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>ViewProfile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="profile">
+  <div class="top-header"> 
+    <img [src]="profile.picture.medium" />
+  </div>
+
+  <div class="details">
+    <div class="label">
+      Name
+    </div>
+    <div class="value">
+      {{profile.name.title}} {{profile.name.first}} {{profile.name.last}}
+    </div>
+  </div>
+  <div class="details">
+    <div class="label">
+      Mobile
+    </div>
+    <div class="value">
+      {{profile.phone}}
+    </div>
+  </div>
+  <div class="details">
+    <div class="label">
+      Email
+    </div>
+    <div class="value">
+      {{profile.email}}
+    </div>
+  </div>
+  <div class="details">
+    <div class="label">
+      Gender
+    </div>
+    <div class="value">
+      {{profile.gender}}
+    </div>
+  </div>
+  <div class="details">
+    <div class="label">
+      Location
+    </div>
+    <div class="value">
+      {{profile.location.street.name}}, {{profile.location.city}}, {{profile.location.state}}, {{profile.location.country}}
+    </div>
+  </div>
+</ion-content>
